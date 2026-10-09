@@ -1,0 +1,30 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}Publicaciones - Blog Consola{% endblock %}
+
+{% block content %}
+<section class="about-header">
+    <span class="badge">Publicaciones</span>
+    <h1>Artículos del Blog</h1>
+    <p style="color: var(--text-muted); max-width: 600px; margin: 0.5rem auto 0 auto;">
+        Publicaciones iniciales cargadas mediante la estructura visual de Django.
+    </p>
+</section>
+
+<section class="grid">
+    <div class="card">
+        <div class="card-icon">📝</div>
+        <h3 class="card-title">Transformando tu Proyecto Django en un Sitio Real</h3>
+        <p class="card-body">
+            En esta Preentrega 8 implementamos el flujo completo: Ruta -> Vista -> Template -> Estático. Dejamos atrás las respuestas simples para dar paso a una interfaz con estilo y herencia de plantillas.
+        </p>
+    </div>
+    <div class="card">
+        <div class="card-icon">🐍</div>
+        <h3 class="card-title">De Consola Interactivas a Aplicaciones Web</h3>
+        <p class="card-body">
+            El sistema original por consola evoluciona hacia una arquitectura MVT limpia, mantenible y escalable con Python y Django.
+        </p>
+    </div>
+</section>
+{% endblock %}

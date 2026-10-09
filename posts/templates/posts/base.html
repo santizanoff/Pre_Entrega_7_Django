@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ titulo_pagina|default:"Blog Consola - Sitio Django" }}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'posts/css/estilos.css' %}">
+</head>
+<body>
+    <!-- Menú de Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="{% url 'posts:inicio' %}" class="nav-brand">
+                    <div class="nav-brand-icon">BC</div>
+                    <span>Blog Consola</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="{% url 'posts:inicio' %}" class="nav-link">Inicio</a></li>
+                    <li><a href="{% url 'posts:lista_posts' %}" class="nav-link">Publicaciones</a></li>
+                    <li><a href="{% url 'posts:acerca' %}" class="nav-link">Acerca de</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Blog Consola - Desarrollado en Django</p>
+            <p class="tag">Preentrega 8 | Arquitectura MVT & Static Files</p>
+        </div>
+    </footer>
+</body>
+</html>

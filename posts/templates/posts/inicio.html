@@ -1,0 +1,41 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}Inicio - Blog Consola{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <span class="badge">Django Web App</span>
+    <h1 class="hero-title">{{ mensaje_bienvenida }}</h1>
+    <p class="hero-description">
+        {{ descripcion_proyecto }}
+    </p>
+    <div class="btn-group">
+        <a href="{% url 'posts:lista_posts' %}" class="btn btn-primary">Explorar Publicaciones</a>
+        <a href="{% url 'posts:acerca' %}" class="btn btn-secondary">Acerca del Proyecto</a>
+    </div>
+</section>
+
+<section class="grid">
+    <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3 class="card-title">Rutas & Views</h3>
+        <p class="card-body">
+            Mapeo de URLs del proyecto y funciones de vistas optimizadas que devuelven respuestas renderizadas con Django.
+        </p>
+    </div>
+    <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3 class="card-title">Diseño y Estilos CSS</h3>
+        <p class="card-body">
+            Integración de archivos estáticos organizados en la app, cargados eficientemente a través de la etiqueta static.
+        </p>
+    </div>
+    <div class="card">
+        <div class="card-icon">🧱</div>
+        <h3 class="card-title">Herencia Modular</h3>
+        <p class="card-body">
+            Uso de plantillas base reusables que evitan duplicidad de código y mantienen la coherencia visual.
+        </p>
+    </div>
+</section>
+{% endblock %}
